@@ -39,13 +39,36 @@ function calcularTriangulo(lado1, lado2, base, altura) {
 
 } ;
 
+function calcularAlturaTriangulo(lado1, base){
+    if(lado1 == base){
+        console.warn("este no es un triangulo isosceles");
+    } else {
+        //h = raizcuadrada(lado1**2 -(b**2)/4)
+        return  Math.sqrt((lado1 **2) - ((base ** 2)/ 4));
+    }
+}
+
+function calcularAlturaTrianguloEscaleno(lado1, lado2, base) {
+    if(lado1 == lado2 || lado2 == base || base == lado1) {
+        console.warn('este no es un triangulo escaleno');
+    } else {
+        const semiperimetro = (lado1 +lado2 + base) / 2;
+         const S = semiperimetro; 
+        
+        return ( (2 / lado1) * Math.sqrt(( S * (S - lado1) * (S - lado2) * (S - base)))  )
+
+    }
+}
+
+
 console.log({
 ladoTriangulo1,
 ladoTriangulo2,
 ladoTrianguloBase,
 alturaTriangulo,
 perimetroTriangulo,
-areaTriangulo
+areaTriangulo,
+calcularAlturaTriangulo, calcularAlturaTrianguloEscaleno
 })
 console.groupEnd('Triangulo')
 
