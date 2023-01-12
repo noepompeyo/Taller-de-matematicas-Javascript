@@ -18,6 +18,48 @@ calcularPromedio([1,2,3,4]);
 
 //SE hara uso del metodo reduce
 
+//SE VA A CALCULAR LA MEDIANA 
+function esPar ( lista) {
+    // if (lista.length % 2) {
+    //     return false;
+
+    // } else {
+    //     return true;
+    // }
+    return !(lista.length % 2);
+
+}
+function esImpar (lista ) {
+    // if (lista.length % 2) {
+    //     return false;
+
+    // } else {
+    //     return true;
+    // }
+    return lista.length % 2;
+
+}
+
+function calcularMediana ( lista) {
+    const listaEsPar = esPar(lista);
+
+    if (listaEsPar) {
+        const mitad1ListaPar = lista[(lista.length / 2) -1];
+        const mitad2ListaPar = lista[lista.length / 2];
+
+        const listaMitades = [mitad1ListaPar, mitad2ListaPar];
+        return calcularPromedio(listaMitades);
+
+    } else {
+        const indexMitadListaImpar = Math.floor(lista.length / 2) ;
+        const medianaListaImpar = lista[indexMitadListaImpar];
+        console.log(indexMitadListaImpar);
+        console.log(medianaListaImpar);
+        const medianaListaPar = medianaListaImpar;
+        return medianaListaPar;
+    }
+}
+
 function calcularPromedio(lista) {
 
     function sumarTodosElementos (valorAcumulado, nuevoValor) {
@@ -34,3 +76,6 @@ function calcularPromedio(lista) {
 }
 
 calcularPromedio([1,2,3,4]);
+
+
+
