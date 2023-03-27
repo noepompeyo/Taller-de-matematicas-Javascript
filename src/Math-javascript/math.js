@@ -1,3 +1,5 @@
+// CALCULAR EL AREA Y EL PERIMI¿ETO DEL CUADRADO
+
 console.group('Cuadrado')
 
 const ladoCaudrado = 5;
@@ -19,6 +21,8 @@ console.log({
     areaCuadrado
 })
 console.groupEnd('Cuadrado')
+
+// CALCULAR EL AREA Y PERIMETRO  DE UN TRIANGULO
 
 console.group('Triangulo')
 
@@ -72,6 +76,7 @@ calcularAlturaTriangulo, calcularAlturaTrianguloEscaleno
 })
 console.groupEnd('Triangulo')
 
+// CALCULAR EL AREA Y PERIMETRO DE UN CIRCULO
 
 console.group('circle')
 
@@ -79,7 +84,7 @@ const radioCirculo = 3;
 const diametroCirculo = radioCirculo * 2;
 const PI = 3.1416;
 
-const circunferencia = diametroCirculo *PI;
+const circunferencia = diametroCirculo * PI;
 const areaCirculo = (radioCirculo ** 2 ) * PI;
 
 console.log({
